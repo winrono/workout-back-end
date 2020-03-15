@@ -1,9 +1,11 @@
 {
   "name": "workout-back-end",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "scripts": {
+    "prebuild": "npm install",
     "build": "node ./util/build.js",
     "lint": "tslint --project \"tsconfig.json\"",
+    "prestart": "npm run build",
     "start": "node -r module-alias/register ./dist",
     "start:dev": "nodemon --config nodemon.json",
     "test": "nodemon --config nodemon.test.json"
