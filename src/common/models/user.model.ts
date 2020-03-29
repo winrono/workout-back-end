@@ -5,7 +5,7 @@ export class User extends Model<User> {
     @Column({
         defaultValue: DataType.UUIDV4,
         primaryKey: true,
-        type: DataType.UUIDV4
+        type: DataType.UUID
     })
     id: string;
     @Column
