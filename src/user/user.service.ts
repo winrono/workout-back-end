@@ -13,4 +13,8 @@ export class UserService {
     createOne(user: StronglyTypedModel<User>): void {
         this.model.create(user);
     }
+
+    async getAll(): Promise<User[]> {
+        return this.model.findAll<User>();
+    }
 }
